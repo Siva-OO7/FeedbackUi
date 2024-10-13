@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .active {
+    @apply bg-black text-red-500;
+} */
+
+.containerUI {
+    @apply max-w-3xl mx-auto  px-5;
+}
+
+
+.reverse {
+    @apply bg-black/45 text-white
+}
+
+.btn {
+    @apply text-white border-0 rounded-lg w-24 h-10 cursor-pointer transform hover:scale-95 hover:opacity-90;
+}
+
+.btn-primary {
+    @apply bg-[#202142];
+}
+
+.btn-secondary {
+    @apply bg-[#ff6a95];
+}
+
+.btn:disabled {
+    @apply bg-[#ccc] text-[#333] cursor-auto;
+}
+
+/* .btn:disabled:hover {
+    @apply transform scale-100 opacity-100;
+} */
+
+
+.rating li {
+    @apply  relative my-2.5 ml-2 bg-[#f4f4f4] w-12 h-12 p-2.5 text-center rounded-full text-lg border border-[#ccc] border-solid transition duration-300;
+}
+
+
+.rating li label {
+    @apply absolute top-[50%] left-[50%] w-12 h-12 p-2.5 rounded-full transform -translate-x-1/2 -translate-y-1/2 cursor-pointer;
+}
+
+.rating li:hover {
+    @apply bg-[#ff6a95] text-white;
+}
+
+[type = 'radio'] {
+    opacity: 0;
+}
+
+[type = 'radio']:checked ~ label {
+    @apply bg-[#ff6a95] text-white;
+}
